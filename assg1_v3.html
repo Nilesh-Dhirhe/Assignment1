@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio webpage</title>
+    <meta name="author" content="Nilesh Dhirhe">
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        body {
+            /* background-color: rgb(64, 55, 55); */
+            background-image: url(/backgrd_img.jpg);
+        }
+
+        .nav-bar { /*This class is for navigation bar block element*/
+            background-color: #d0437a;
+            width: auto;
+            /* border: 4px solid purple; */
+            margin-bottom: 10px;
+            border-radius: 5px;
+            margin-top: 1px;
+
+        }
+
+        .nav-bar li {  /*This pseudo class is for styling the list of nav bar */
+            float: left;
+            list-style: none;
+            margin: 14px 16px;
+        }
+
+        .nav-bar ul {  /*I have written this code so that list does not overlap with parent*/
+            overflow: auto;
+        }
+
+        .nav-bar li a { /*This is for giving spaces between nav bar elements*/
+            padding: 6px;
+        }
+
+        .nav-bar li a:hover {
+            /*To add features when cursor is hovered over*/
+            color: rgb(225, 241, 7);
+            font-weight: bold;
+        }
+
+        .alt {  /*To remove underline from the text of nav bar*/
+            color: aliceblue;
+            text-decoration: none;
+
+        }
+
+        .div1 {   /*This block comes below the nav bar which contains my photo and introduction*/
+            background-color: #322f33;
+            height: 300px;
+            width: auto;
+            float: right;
+            border-radius: 7px;
+            margin-bottom: 30px;
+
+        }
+
+        #firstpara {    /*This id is for styling the introduction para*/
+            color: white;
+            padding: 5px 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .first {      /*This class is for styling the para of introduction*/
+            /* float: right; */
+            margin-left: 520px;
+            margin-top: 20px;
+            line-height: 40px;
+            margin-right: 106px;
+        }
+
+        /* .hor-line {   I tried to do something with the horizontal line but could not execute
+            
+        } */
+
+        p {
+            text-align: justify;
+        }
+
+        .searchbox {  /*This class is for styling the search box present in the navigation bar*/
+            color: grey;
+            padding: 14px 130px;
+            float: right;
+        }
+
+        #search {   
+            padding-left: 12px;
+            border-radius: 18px;
+        }
+
+        /* .div2 {  Failed attempt to align
+            align-items:stretch; 
+        } */
+
+        .boxes {    /*This class is for styling of the four boxes for my interests*/
+            width: 330px;
+            /* border: 3px solid red; */
+            color: white;
+            float: left;
+            height: 200px;
+            margin: 2.91px;
+            border-radius: 10px;
+            /* border: 3px dotted white; */
+            margin-bottom: 20px;
+            /*Added margin for the form below*/
+        }
+
+        /*Below are the ids for styling each boxes under 'boxes' class */
+
+        #box1 {
+            /* background-color: orange; */
+            padding: 20px;
+            background-image: url(/Engineering.png);
+            background-repeat: no-repeat;
+            background-size: 380px 330px;
+        }
+
+        #box2 {
+            background-color: greenyellow;
+            padding: 20px;
+            background-image: url(/Art_2.png);
+            background-repeat: no-repeat;
+            background-size: 380px 330px;
+            opacity: 1;
+        }
+
+        #box3 {
+            background-color: pink;
+            padding: 20px;
+            background-image: url(/Development.png);
+            background-repeat: no-repeat;
+            background-size: 380px 330px;
+            opacity: 1;
+        }
+
+        #box4 {
+            background-color: rgb(101, 217, 250);
+            padding: 20px;
+        }
+
+        .box-content {  /*This class is for styling the content inside the boxes class*/
+            font-family: cursive;
+            color: black;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .box-content:hover {    /*This is the class for sytling the text and size of the font when cursor id hovered over*/
+            color: red;
+            font-size: 17px;
+        }
+
+        .Myphoto {  /*This class is for Profile photo styling*/
+            float: left;
+            height: 200px;
+            width: 200px;
+            margin-left: 127px;
+            margin-top: 42px;
+        }
+
+        .formbox {  /*This class contains the next block of contact details and form*/
+            color: white;
+            background-color: #1d0c37;
+            clear: both;
+            height: 550px;
+            margin-top: 80px;
+        }
+
+        .contact {  /*This class is for contact details*/
+            width: 345px;
+            float: left;
+            padding-top: 20px;
+            padding-left: 350px;
+        }
+
+        .form {     /*This class is for styling the form given*/
+            width: 300px;
+            float: right;
+            padding-top: 15px;
+            padding-right: 291px;
+            line-height: 43px;
+        }
+        
+        #submitbutton {       /*This I have done for adding space between the reset button and submit button*/
+            margin-right: 20px;
+        }
+
+        .list-space {   /*This class is for providing line spacing for form items */
+            line-height: 40px;
+        }
+
+        .handles {     /*This class is for the block contaning social media handles*/
+            background-color: #6a6a6a;
+            margin-top: 20px;
+            height: 80px;
+            /* border: 2px solid white; */
+        }
+
+        .handles li {
+            float: left;
+            list-style: none;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .handles ul {
+            overflow: auto;
+        }
+
+        .social-handles {   /*This I have to remove underline from the text in the list of handles class*/
+            text-decoration: none;
+        }
+
+        #instagram {
+            margin-left: 550px;
+        }
+        
+        .Interest-title1 {      /*This class contains the styling of My Interets block just below introduction block*/
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 100px;
+            font-size: 30px;
+        }
+        
+        .Interest-title2 {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 145px;
+            font-size: 30px;
+        }
+
+        .Interest-title3 {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 100px;
+            font-size: 30px;
+        }
+        
+        .Interest-title4 {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 100px;
+            font-size: 30px;
+        }
+
+        .MyInterestbox {
+            border: 3px dotted red;
+            clear: both;
+            margin-bottom: 20px;
+        }
+        .MyInterest {   /*This class is for styling the text 'My Interests'*/
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* .videobox {  I wanted to add some video links but could not decide on time hence this is incomplete
+            background-color: rgb(193, 166, 166);
+            height: 400px;
+            width: auto;
+            margin-top: 320px;
+        } */
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li> <a href="#" class="alt">About Me</a> </li>
+            <li> <a href="#" class="alt">Qualifications</a> </li>
+            <li> <a href="#" class="alt">Contact Details</a> </li>
+            <div class="searchbox">
+                <input type="text" name="search" id="search" placeholder="Search here">
+            </div>
+        </ul>
+    </nav>
+
+    <div class="div1">
+        <div>
+            <img src="https://lh3.googleusercontent.com/a/AGNmyxZHAgzGNXXwhOsSqryA5ygaywVGuOpnhtPg8cwWNg=s360-c-no"
+                alt="No Image Available" class="Myphoto">
+        </div>
+
+        <div class="first">
+            <p id="firstpara">
+                <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero consequatur, doloribus quibusdam neque
+                corrupti est velit. Harum sit, voluptate at, corporis, in possimus vel voluptas neque quidem atque
+                laudantium omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum beatae omnis libero
+                totam minima ad qui deserunt deleniti illum? -->
+                Hello everyone ! I am Nilesh Kumar Dhirhe from Energy Science & Engineering Department IIT Bombay. Through this webpage you will get to know about me and my fields of interest. I have also provided my contact details if you want to contact me. Follow me on my social-media handles to stay connected   with me. Thank you so much for stopping by!
+            </p>
+        </div>
+    </div>
+
+    <div class="MyInterestbox">
+        <p class="MyInterest">My Interests</p>
+    </div>
+
+    <div class="div2">
+        <div class="boxes" id="box1">
+            <p class="box-content">
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quis. -->
+                <span class="Interest-title1">Engineering</span> <br> <br>
+                I like the vast scope of engineering which can cater every field of life. Innovate, research and impliment is what engineering is.
+            </p>
+        </div>
+        <div class="boxes" id="box2">
+            <p class="box-content">
+                <span class="Interest-title2">Art</span> <br> <br>
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quis. -->
+                Art makes impossible possible. I always took keen interest in art and design from my school days itself and participted in various competitions.
+            </p>
+        </div>
+        <div class="boxes" id="box3">
+            <p class="box-content">
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quis. -->
+                <span class="Interest-title3">Development</span> <br> <br>
+                Programming is the need of the hour and with this AI-driven world everything happens on computers. My interest in web development started in high school itself.
+
+            </p>
+        </div>
+        <div class="boxes" id="box4">
+            <p class="box-content">
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quis. -->
+                <span class="Interest-title4">Dancing</span> <br> <br>
+                I like dancing a lot. I have taken part in group dance and other cultural activities in my school.
+
+            </p>
+        </div>
+    </div>
+
+    <!-- In the below block I wanted to add some video links but could not complete on time  -->
+
+    <!-- <div class="videobox">     
+        <div class="video">
+            <video src="https://www.youtube.com/watch?v=-ku1E22OmvE"></video>
+        </div>
+        <div class="video">
+
+        </div>
+        <div class="video">
+
+        </div>
+    </div> -->
+
+    <div class="formbox">
+        <div class="contact">
+            <h1>Contact Me</h1>
+            <h4>Let's connect and make wonderful projects together. Be the part of the team and grow together.</h4>
+            <ul type="none" class="list-space">
+                <li> <i class="bi bi-telephone"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg> &nbsp;&nbsp;&nbsp;Phone &nbsp; <span> +91 6260288450</span></li>
+                <li>  <i class="bi bi-envelope"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg> &nbsp;&nbsp;&nbsp; Email &nbsp; <span> nileshdhirhe29@gmail.com</span></li>
+                <li> <i class="bi bi-geo-alt"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>&nbsp;&nbsp;&nbsp; Address &nbsp; <span>Hostel-16 A811 IIT Bombay Mumbai Maharastra</span></li>
+            </ul>
+        </div>
+        <div class="form">
+            <h1>Drop A Line</h1>
+            <form>
+                <div>
+                    <label for="one"></label>
+                    Name <input type="text" name="name" id="one">
+                </div>
+                <div>
+                    Email <input type="text" name="email" id="two">
+                </div>
+                <div>
+                    Phone <input type="text" name="phone" id="three">
+                </div>
+                <div>
+                    Gender: &nbsp;&nbsp; Male <input type="radio" name="gender"> Female <input type="radio" name="gender"> Other <input type="radio" name="gender">
+                </div>
+                <div>
+                    Comment here 
+                    <br>
+                    <textarea name="comment" id="comment" cols="60" rows="10"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="SUBMIT" id="submitbutton">
+                    <input type="reset" value="RESET">
+                </div>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <div class="handles">
+            <ul type="none">
+                <li> <a href="https://www.instagram.com/neelu_kun/" class="social-handles" id="instagram" target="_blank"> <img src="/icons8-instagram-48.png" alt="No image" class="handle-img"></a></li>
+                <li> <a href="https://www.linkedin.com/in/nilesh-kumar-dhirhe-303774213/" class="social-handles" target="_blank"> <img src="/icons8-linkedin-48.png" alt="No image" class="handle-img"> </a></li>
+                <li> <a href="https://www.facebook.com/nilesh.dhirhe.5/" class="social-handles" target="_blank"> <img src="/icons8-facebook-48.png" alt="No image" class="handle-img"> </a></li>
+                <li> <a href="https://twitter.com/DhirheNilesh" class="social-handles" target="_blank"> <img src="/icons8-twitter-48.png" alt="No image" class="handle-img"> </a></li>
+            </ul>
+    </div>
+</body>
+
+</html>
